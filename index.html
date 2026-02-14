@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Abhishek 💙</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    overflow: hidden;
+}
+
+/* Center Card */
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+}
+
+/* Button */
+.button {
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: none;
+    background-color: #4fc3f7;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.08);
+    background-color: #29b6f6;
+}
+
+/* Hidden message */
+.message {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+}
+
+/* Glowing Name */
+.glow {
+    font-size: 42px;
+    margin-bottom: 15px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #4fc3f7, 0 0 20px #4fc3f7; }
+    to { text-shadow: 0 0 25px #81d4fa, 0 0 50px #81d4fa; }
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: white;
+}
+
+.bouquet {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+/* Floating aesthetic emojis */
+.emoji {
+    position: absolute;
+    font-size: 30px;
+    animation: float 8s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-25px); }
+    100% { transform: translateY(0px); }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <button class="button" onclick="reveal()">Click Here 💙</button>
+
+    <div id="text" class="message">
+        <div class="glow">Abhishek 💙</div>
+        <p>
+        I just wanted to tell you something from my heart…<br><br>
+        I admire your beautiful eyes — they’re honestly my favorite view 🥹<br>
+        The way you dress? Effortlessly attractive every time 😌✨<br><br>
+        But more than anything…<br>
+        I’m grateful for how much you care.<br>
+        The effort you make just to keep me happy never goes unnoticed.<br><br>
+        Thank you for being you.<br>
+        I’m really lucky to have you in my life 💙
+        </p>
+
+        <div class="bouquet">💐🌹🌷</div>
+    </div>
+</div>
+
+<!-- Floating Aesthetic Icons -->
+<div class="emoji" style="top:10%; left:10%;">📱</div>
+<div class="emoji" style="top:20%; right:15%;">🏍️</div>
+<div class="emoji" style="bottom:15%; left:20%;">🎧</div>
+<div class="emoji" style="bottom:20%; right:10%;">🍪</div>
+<div class="emoji" style="top:50%; left:5%;">🍫</div>
+
+<!-- Local Audio Element -->
+<audio id="bgMusic" loop>
+    <source src="romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function reveal() {
+    document.getElementById("text").classList.add("show");
+    var music = document.getElementById("bgMusic");
+    music.play().catch(() => {});
+}
+</script>
+
+</body>
+</html>
